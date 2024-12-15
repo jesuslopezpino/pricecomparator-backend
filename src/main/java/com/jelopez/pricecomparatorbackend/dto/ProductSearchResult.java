@@ -1,5 +1,7 @@
 package com.jelopez.pricecomparatorbackend.dto;
 
+import java.time.Instant;
+
 public class ProductSearchResult {
     private String source;
     private Long id;
@@ -7,8 +9,9 @@ public class ProductSearchResult {
     private double price;
     private String description;
     private String category;
-    private String image;    // en FakeStore este campo representa la URL de la imagen
+    private String image;
     private String currency;
+    private Instant viewedAt; // Usar Instant
 
     public ProductSearchResult() {}
 
@@ -20,7 +23,8 @@ public class ProductSearchResult {
             String description,
             String category,
             String image,
-            String currency
+            String currency,
+            Instant viewedAt // Ahora este parámetro es un Instant
     ) {
         this.source = source;
         this.id = id;
@@ -30,6 +34,7 @@ public class ProductSearchResult {
         this.category = category;
         this.image = image;
         this.currency = currency;
+        this.viewedAt = viewedAt;
     }
 
     // Getters y Setters
@@ -65,6 +70,7 @@ public class ProductSearchResult {
         this.price = price;
     }
 
+
     public String getDescription() {
         return description;
     }
@@ -81,6 +87,7 @@ public class ProductSearchResult {
         this.category = category;
     }
 
+
     public String getImage() {
         return image;
     }
@@ -95,5 +102,13 @@ public class ProductSearchResult {
 
     public void setCurrency(String currency) {
         this.currency = currency;
+    }
+
+    public Instant getViewedAt() {
+        return viewedAt;
+    }
+
+    public void setViewedAt(Instant viewedAt) {
+        this.viewedAt = viewedAt;
     }
 }

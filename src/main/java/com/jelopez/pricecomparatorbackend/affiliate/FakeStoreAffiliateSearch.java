@@ -5,6 +5,7 @@ import com.jelopez.pricecomparatorbackend.dto.ProductSearchResult;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.time.Instant;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -39,7 +40,8 @@ public class FakeStoreAffiliateSearch implements AffiliateSearchService {
                         p.getDescription(),
                         p.getCategory(),
                         p.getImage(),
-                        "USD"
+                        "USD",
+                        Instant.now() // Usar Instant en vez de LocalDateTime
                 ))
                 .collect(Collectors.toList());
     }
