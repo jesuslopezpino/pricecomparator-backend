@@ -1,0 +1,18 @@
+meta {
+  name: Compare
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8080/api/products/compare
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "productName": "test",
+    "currentUrl": "https://www.amazon.es/hz/mobile/mission?p=B9z4tlTsKzpr%2BsU5lM%2F9ji2yoti%2BMMeHVz6KmibJDVV8LYSm9YOJBJ3SxQTb5xtRGLkdeOSjqDvd6sGr%2B3RZPNAUMYM8V9JIfYyF3PuiX8hJU3qpchJXPDoYgWPYoXuE0ioUiqoQ2asv%2FjfUqcVhpQE5jI032HI0yRi%2BBgk%2BL2UddQiRm%2BYC8TotG1SQkQWDXKAkOdztt9Acc6NImK7IHwq%2BA9uhXx1WV8OehskMIN4Ikbsvr33XWPl7m096f2F9%2Fl5r5Yu28wTKerX1HMBx4V%2F8xc33dJXbLiRDCoYI9MnSnYomEJXfO19M3xOfYDS6oM1FFG6EAzMUrX0xb4mjXcvsZl26CINUnMVpxloyOjtwnaZ6IZts5m6%2B8fTwHesbhTSQw4526IEVAEyNPG2AuCmbd5B5NYPf&ref_=ci_mcx_mi&pf_rd_r=6V85FWGF5FXY3PM4X7W9&pf_rd_p=151a87b5-0ba3-4ef4-b004-e3d0636e486e&pd_rd_r=3f97570a-2a6e-4588-978d-c65d6278858e&pd_rd_w=HbVmE&pd_rd_wg=x5Jqw"
+  }
+}
